@@ -61,18 +61,21 @@ function location() {
     return location
 }
 
+function resume() {
+    const resume = document.createElement('div')
+    resume.classList.add('resume')
+    resume.textContent = "Beary's has the best porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again."
+    return resume
+}
+
 function main() {
     const main = document.createElement('main')
     const title = document.createElement('h1')
-    const resume = document.createElement('div')
-    resume.classList.add('resume')
-
     main.classList.add('main')
     title.textContent = "Beary's Breakfast Bar"
-    resume.textContent = "Beary's has the best porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again."
 
     main.appendChild(title)
-    main.appendChild(resume)
+    main.appendChild(resume())
     main.appendChild(hours())
     main.appendChild(location())
     return main
