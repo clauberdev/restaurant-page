@@ -48,8 +48,16 @@ function hours() {
 
 function location() {
     const location = document.createElement('div')
+    const h2 = document.createElement('h2')
+    const p = document.createElement('p')
     location.classList.add('location')
-    location.textContent = '123 Forest Drive, Forestville, Maine'
+
+    h2.textContent = 'Location'
+    p.textContent = '123 Forest Drive, Forestville, Maine'
+
+    location.appendChild(h2)
+    location.appendChild(p)
+
     return location
 }
 
